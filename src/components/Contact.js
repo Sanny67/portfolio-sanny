@@ -70,7 +70,7 @@ const Contact = () => {
     };
 
     return (
-        <section className='min-h-[100vh] my-20' id='contact'>
+        <section className='min-h-[100vh] my-10 lg:my-20' id='contact'>
         <div className='container mx-auto'>
 
             <div className='flex flex-col lg:flex-row'>

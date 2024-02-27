@@ -24,7 +24,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section className='section min-h-[100vh] py-24' id='services'>
+    <section className='section min-h-[100vh] my-10 lg:my-20' id='services'>
       <div className='container mx-auto'>
         <div className='flex flex-col lg:flex-row'>
 
