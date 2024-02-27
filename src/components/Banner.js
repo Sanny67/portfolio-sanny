@@ -5,22 +5,11 @@ import { FaGithub, FaLinkedin, FaStackOverflow } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from 'framer-motion';
 import { fadeIn } from '../variants';
+import { Link } from 'react-scroll';
+
+const RESUME_LINK = "https://drive.google.com/file/d/1AdKC1DTrtMQIhya74YcvttcxEr94WazJ/view?usp=sharing";
 
 const Banner = () => {
-
-  const RESUME_LINK = "https://drive.google.com/file/d/1AdKC1DTrtMQIhya74YcvttcxEr94WazJ/view?usp=sharing";
-  const handleDownload = () => {
-    const pdfUrl = `../assets/Sayantani Chatterjee - CV.pdf`;
-    const anchor = document.createElement('a');
-    anchor.href = pdfUrl;
-    anchor.download = 'Sayantani Chatterjee - CV.pdf';
-    anchor.click();
-    console.log("hghj")
-
-    // Clean up
-    URL.revokeObjectURL(anchor.href);
-  };
-
   return (
     <section className='min-h-[90vh] pt-0 pb-16 flex items-center' id='home'>
       <div className='container mx-auto'>
@@ -73,10 +62,16 @@ const Banner = () => {
               viewport={{once: false, amount: 0.7}}
               className='flex max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0'
             >
-              <button className='btn btn-lg'>
-                <span>Contact me</span>
-              </button>
-              <a href='javascript:void(0)' onClick={handleDownload} className='text-gradient button-link'>My Resume</a>
+              <Link to='contact' smooth={true} spy={true} >
+                <button className='btn btn-lg'>
+                  <span>Contact me</span>
+                </button>
+              </Link>
+              <a
+                download={true}
+                className='text-gradient button-link'
+                href='../assets/Sayantani Chatterjee - CV.pdf'
+              >My Resume</a>
             </motion.div>
 
             {/* socials */}
@@ -108,7 +103,7 @@ const Banner = () => {
             initial="hidden"
             whileInView={'show'}
             viewport={{once: false, amount: 0.7}}
-            className='hidden lg:flex flex-1 max-w-[320px] lg:max-w-[482px]'
+            className='hidden lg:flex flex-1 max-w-[320px] lg:max-w-[450px]'
           >
             <img src={Image} alt='' />
           </motion.div>

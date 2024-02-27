@@ -4,6 +4,7 @@ import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../variants';
 import Bullet from "../assets/bullet.svg";
+import { Link } from 'react-scroll';
 
 const About = () => {
   const [ref, inView] = useInView({
@@ -83,10 +84,16 @@ const About = () => {
 
             {/* button */}
             <div className='flex gap-x-8 items-center'>
-              <button className='btn btn-lg'>
-                <span>Contact Me</span>
-              </button>
-              <a href='#' className='text-gradient btn-link'>My Portfolio</a>
+              <Link to='contact' smooth={true} spy={true} >
+                <button className='btn btn-lg'>
+                  <span>Contact me</span>
+                </button>
+              </Link>
+              <a
+                download={true}
+                className='text-gradient btn-link'
+                href='../assets/Sayantani Chatterjee - CV.pdf'
+              >My Resume</a>
             </div>
 
           </motion.div>
