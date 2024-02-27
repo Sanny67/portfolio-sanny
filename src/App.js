@@ -19,7 +19,7 @@ const App = () => {
       <Nav />
       <About />
       <Services />
-      <Work />
+      {/* <Work /> */}
       <Contact />
       <div className=''></div>
       <ToastContainer

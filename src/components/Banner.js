@@ -7,6 +7,20 @@ import { motion } from 'framer-motion';
 import { fadeIn } from '../variants';
 
 const Banner = () => {
+
+  const RESUME_LINK = "https://drive.google.com/file/d/1AdKC1DTrtMQIhya74YcvttcxEr94WazJ/view?usp=sharing";
+  const handleDownload = () => {
+    const pdfUrl = `../assets/Sayantani Chatterjee - CV.pdf`;
+    const anchor = document.createElement('a');
+    anchor.href = pdfUrl;
+    anchor.download = 'Sayantani Chatterjee - CV.pdf';
+    anchor.click();
+    console.log("hghj")
+
+    // Clean up
+    URL.revokeObjectURL(anchor.href);
+  };
+
   return (
     <section className='min-h-[90vh] pt-0 pb-16 flex items-center' id='home'>
       <div className='container mx-auto'>
@@ -62,7 +76,7 @@ const Banner = () => {
               <button className='btn btn-lg'>
                 <span>Contact me</span>
               </button>
-              <a href='#' className='text-gradient button-link'>My Resume</a>
+              <a href='javascript:void(0)' onClick={handleDownload} className='text-gradient button-link'>My Resume</a>
             </motion.div>
 
             {/* socials */}
