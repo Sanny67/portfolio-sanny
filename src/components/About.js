@@ -8,7 +8,7 @@ import { Link } from 'react-scroll';
 
 const About = () => {
   const [ref, inView] = useInView({
-    threshold: 0.5,
+    threshold: 0.3,
   });
 
   const skillSetArray = [
@@ -28,7 +28,7 @@ const About = () => {
             initial='hidden'
             whileInView={'show'}
             viewport={{ once: false, amount: '0.3' }}
-            className='flex-1 bg-about bg-contain bg-no-repeat min-h-[400px] lg:min-h-[600px] mix-blend-lighten bg-top'
+            className='hidden lg:flex flex-1 bg-about bg-contain bg-no-repeat min-h-[400px] lg:min-h-[600px] mix-blend-lighten bg-top '
           ></motion.div>
 
           {/* text */}
@@ -41,7 +41,7 @@ const About = () => {
           >
             <h2 className='h2 text-accent'>About me</h2>
             <h3 className='h3 mb-4'>My background includes extensive work in both Laravel and MERN Stack Developer roles.</h3>
-            <div className='mb-6 flex gap-x-20'>
+            <div className='mb-6 flex lg:gap-x-20 gap-x-1'>
               {skillSetArray.map(skillSet => (
                 <div className='flex flex-col'>
                     {skillSet.map(skill => (

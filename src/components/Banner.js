@@ -11,7 +11,7 @@ const RESUME_LINK = "https://drive.google.com/file/d/1AdKC1DTrtMQIhya74YcvttcxEr
 
 const Banner = () => {
   return (
-    <section className='min-h-[90vh] pt-0 pb-16 flex items-center' id='home'>
+    <section className='min-h-[90vh] pt-0 pb-10 flex items-center' id='home'>
       <div className='container mx-auto'>
         <div className='flex flex-col gap-y-8 lg:flex-row lg:items-center lg:gap-x-12'>
 
