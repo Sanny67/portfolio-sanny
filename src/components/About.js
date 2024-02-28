@@ -18,7 +18,7 @@ const About = () => {
   ];
 
   return (
-    <section className='section min-h-[100vh] my-10 lg:my-20' id='about' ref={ref}>
+    <section className='section min-h-[100vh] my-10' id='about' ref={ref}>
       <div className='container mx-auto'>
         <div className='flex flex-col gap-y-10 lg:flex-row lg:items-center lg:gap-x-20 lg:gap-y-0'>
 

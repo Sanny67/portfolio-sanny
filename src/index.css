@@ -88,7 +88,7 @@
     @apply text-base;
   }
   .text-gradient {
-    @apply bg-gradient-to-r text-transparent bg-clip-text from-[#004f35] to-[#ffca18] font-bold font-primary hover:from-[#ffca18] hover:to-[#004f35];
+    @apply bg-gradient-to-r text-transparent bg-clip-text from-[#78be20] to-[#ffca18] font-bold font-primary hover:from-[#ffca18] hover:to-[#78be20];
   }
   /* .text-gradient {
     @apply bg-gradient-to-r text-transparent bg-clip-text 
