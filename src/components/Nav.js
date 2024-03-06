@@ -5,11 +5,9 @@ import { BsClipboardData, BsBriefcase,  BsChatSquare } from 'react-icons/bs';
 import { Link } from 'react-scroll';
 const Nav = () => {
   return (
-    <nav className='fixed bottom-2 lg:bottom-8 w-full overflow-hidden z-50'>
-      <div className='container mx-auto'>
+    <nav className='fixed bottom-2 w-full lg:bottom-8 lg:w-1/2 lg:w-2/5 overflow-hidden z-50 left-1/2 transform -translate-x-1/2'>
         {/* nav inner */}
         <div className='w-full bg-black/20 h-[96px] backdrop-blur-2x1 rounded-full max-w-[460px] mx-auto px-5 flex justify-between items-center text-2x1 text-white/50'>
-
           <Link
             to='home'
             activeClass='active'
@@ -57,7 +55,6 @@ const Nav = () => {
           </Link>
 
         </div>
-      </div>
     </nav>
   );
 };

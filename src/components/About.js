@@ -42,13 +42,13 @@ const About = () => {
             <h2 className='h2 text-accent'>About me</h2>
             <h3 className='h3 mb-4'>My background includes extensive work in both Laravel and MERN Stack Developer roles.</h3>
             <div className='mb-6 flex lg:gap-x-20 gap-x-3'>
-              {skillSetArray.map(skillSet => (
-                <div className='flex flex-col'>
-                    {skillSet.map(skill => (
-                      <p>
-                        <img src={Bullet} alt='bullet' style={{height: '25px'}} className='inline h-[30px]'/>
-                        {skill}
-                      </p>
+              {skillSetArray.map((skillSet, i) => (
+                <div key={i} className='flex flex-col'>
+                    {skillSet.map((skill, j) => (
+                        <p key={j}>
+                            <img src={Bullet} alt='bullet' style={{height: '25px'}} className='inline h-[30px]'/>
+                            {skill}
+                        </p>
                     ))}
                 </div>
               ))}

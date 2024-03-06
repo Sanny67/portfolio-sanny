@@ -6,10 +6,27 @@ import { TypeAnimation } from "react-type-animation";
 import { motion } from 'framer-motion';
 import { fadeIn } from '../variants';
 import { Link } from 'react-scroll';
+import Resume from '../assets/resume.pdf';
 
-const RESUME_LINK = "https://drive.google.com/file/d/1AdKC1DTrtMQIhya74YcvttcxEr94WazJ/view?usp=sharing";
 
 const Banner = () => {
+  
+  const downloadResume = () => {
+    fetch(Resume)
+      .then((response) => response.blob())
+      .then((blob) => {
+        const url = window.URL.createObjectURL(new Blob([blob]));
+        const link = document.createElement('a');
+        link.href = url;
+        link.setAttribute('download', 'Sayantani-Chatterjee-CV.pdf');
+        document.body.appendChild(link);
+        link.click();
+      })
+      .catch((error) => {
+        console.error('Error downloading file:', error);
+      });
+  };
+
   return (
     <section className='min-h-[90vh] flex items-center' id='home'>
       <div className='container mx-auto'>
@@ -35,6 +52,8 @@ const Banner = () => {
               <span className='text-white mr-4'>I am a</span>
               <TypeAnimation sequence={[
                 'Full Stack Developer',
+                2000,
+                'Prompt Engineer',
                 2000,
                 'MERN Stack Developer',
                 2000,
@@ -70,7 +89,9 @@ const Banner = () => {
               <a
                 download={true}
                 className='text-gradient button-link'
-                href='../assets/Sayantani Chatterjee - CV.pdf'
+                onClick={downloadResume}
+                // href='../assets/Sayantani Chatterjee - Resume.pdf'
+                // onClick={(e) => {window.open("https://drive.google.com/file/d/1vc2Xw13I1N9aajsAlhtbDVXzjhaHhoOo/view?usp=sharing&export=download", "_blank");}}
               >My Resume</a>
             </motion.div>
 
