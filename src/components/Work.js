@@ -7,7 +7,7 @@ import Img3 from '../assets/portfolio-img3.png';
 
 const Work = () => {
   return (
-    <section className='section min-h-[100vh] my-20' id='work'>
+    <section className='min-h-[100vh] my-20' id='work'>
       <div className='container mx-auto'>
 
         <div className='flex flex-col lg:flex-row gap-x-10'>

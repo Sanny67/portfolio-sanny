@@ -18,8 +18,8 @@ const About = () => {
   ];
 
   return (
-    <section className='section min-h-[100vh] my-10' id='about' ref={ref}>
-      <div className='container mx-auto'>
+    <section className='min-h-[90vh]' id='about' ref={ref}>
+      <div className='container mx-auto my-10'>
         <div className='flex flex-col gap-y-10 lg:flex-row lg:items-center lg:gap-x-20 lg:gap-y-0'>
 
           {/* image */}
@@ -28,7 +28,7 @@ const About = () => {
             initial='hidden'
             whileInView={'show'}
             viewport={{ once: false, amount: '0.3' }}
-            className='hidden lg:flex flex-1 bg-about bg-contain bg-no-repeat min-h-[400px] lg:min-h-[600px] mix-blend-lighten bg-top '
+            className='hidden lg:flex flex-grow-75 bg-about bg-contain bg-no-repeat min-h-[400px] lg:min-h-[550px] mix-blend-lighten bg-top'
           ></motion.div>
 
           {/* text */}
@@ -37,11 +37,11 @@ const About = () => {
             initial='hidden'
             whileInView={'show'}
             viewport={{ once: false, amount: '0.3' }}
-            className='flex-1'
+            className='flex-1 py-10'
           >
             <h2 className='h2 text-accent'>About me</h2>
             <h3 className='h3 mb-4'>My background includes extensive work in both Laravel and MERN Stack Developer roles.</h3>
-            <div className='mb-6 flex lg:gap-x-20 gap-x-3'>
+            <div className='mb-6 flex justify-between'>
               {skillSetArray.map((skillSet, i) => (
                 <div key={i} className='flex flex-col'>
                     {skillSet.map((skill, j) => (

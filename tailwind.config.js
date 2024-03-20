@@ -29,5 +29,21 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      const newUtilities = {
+        '.flex-grow-25': {
+          flexGrow: '0.25',
+        },
+        '.flex-grow-50': {
+          flexGrow: '0.5',
+        },
+        '.flex-grow-75': {
+          flexGrow: '0.75',
+        },
+      };
+      
+      addUtilities(newUtilities, ['responsive', 'hover']);
+    },
+  ],
 };

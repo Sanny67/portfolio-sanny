@@ -30,9 +30,11 @@ const services = [
 
 const Services = () => {
   return (
-    <section className='section min-h-[100vh] my-10 lg:my-20' id='services'>
-      <div className='container mx-auto'>
-        <div className='flex flex-col lg:flex-row'>
+    <section className='min-h-[90vh]' id='services'>
+      <div className='container mx-auto px-0 py-10'>
+        
+        {/* <div className='flex flex-col gap-y-10 lg:flex-row lg:items-center lg:gap-y-0'> */}
+        <div className='flex flex-col lg:flex-row justify-between gap-y-10 lg:gap-y-0'>
 
           {/* text & image */}
           <motion.div
@@ -40,7 +42,7 @@ const Services = () => {
             initial='hidden'
             whileInView={'show'}
             viewport={{ once: false, amount: '0.3' }}
-            className='flex-1 lg:bg-services lg:bg-bottom bg-no-repeat mix-blend-lighten mb-12 lg:mb-0'>
+            className='flex-1 lg:bg-services lg:bg-bottom bg-no-repeat mix-blend-lighten mb-12 lg:mb-0 w-50'>
             <h2 className='h2 text-accent mb-6'>What I Do.</h2>
             {/* <h3 className='h3 max-w-[455px] mb-16'>I excel in dynamic environments, using tech to solve complex problems</h3> */}
             <h3 className='h3 max-w-[455px] mb-16'>I thrive in dynamic environments where I can apply my expertise to create innovative solutions.</h3>
