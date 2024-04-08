@@ -18,7 +18,7 @@ const Banner = () => {
         const url = window.URL.createObjectURL(new Blob([blob]));
         const link = document.createElement('a');
         link.href = url;
-        link.setAttribute('download', 'Sayantani-Chatterjee-CV.pdf');
+        link.setAttribute('download', 'Sayantani-Chatterjee-Resume.pdf');
         document.body.appendChild(link);
         link.click();
       })
