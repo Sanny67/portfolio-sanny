@@ -11,7 +11,7 @@ const services = [
   {
     name: 'MERN Stack Development',
     image: Service1,
-    description: 'My deep understanding of the MERN Stack ecosystem and System Design allows me to architect scalable and efficient solutions, making me a valuable asset to any development team. ',
+    description: 'My expertise in the MERN Stack ecosystem and System Design enables me to architect scalable and efficient solutions, contributing effectively to development teams.',
     link: '#'
   },
   {
@@ -21,9 +21,9 @@ const services = [
     link: '#'
   },
   {
-    name: 'Prompt Engineering',
+    name: 'Python Development',
     image: Service3,
-    description: 'As a skilled prompt engineer, my expertise lies in crafting tailored prompts to achieve desired outcomes, leveraging my proficiency in prompt generation and deep knowledge of generative AI.',
+    description: 'Experienced Python developer skilled in building robust applications, with a focus on unit testing, TDD, and integration using Flask.',
     link: '#'
   },
 ];
