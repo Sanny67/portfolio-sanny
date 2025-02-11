@@ -92,7 +92,7 @@ const About = () => {
               <a
                 download={true}
                 className='text-gradient btn-link'
-                href='../assets/Sayantani Chatterjee - CV.pdf'
+                href='../assets/resume.pdf'
               >My Resume</a>
             </div>
 
